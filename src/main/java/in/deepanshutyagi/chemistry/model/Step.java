@@ -20,7 +20,7 @@ public class Step {
     private StepType type;
 
     private String videoLink;
-    
+
     private String text;
 
     private Module module;
