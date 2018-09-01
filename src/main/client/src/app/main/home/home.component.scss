@@ -1,0 +1,31 @@
+.Landing_page
+{
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+}
+.Main_heading
+{
+  color: #424243;
+}
+.Content_column
+{
+  border: none;
+  border-right-style: solid ;
+  border-right-width: medium;
+  border-right-color: #8e8e8e;
+}
+#triangle-topleft {
+  color: #000;
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+	border-right: 100px solid transparent;
+}
+#triangle-bottomright {
+  color: #000;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid red;
+	border-left: 100px solid transparent;
+}
