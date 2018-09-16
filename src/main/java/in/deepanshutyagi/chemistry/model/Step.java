@@ -23,7 +23,7 @@ public class Step {
 
     private String text;
 
-    private Module module;
+//    private Module module;
 
     public Step() {
     }
@@ -68,11 +68,11 @@ public class Step {
         this.text = text;
     }
 
-    public Module getModule() {
-        return module;
-    }
-
-    public void setModule(Module module) {
-        this.module = module;
-    }
+//    public Module getModule() {
+//        return module;
+//    }
+//
+//    public void setModule(Module module) {
+//        this.module = module;
+//    }
 }
