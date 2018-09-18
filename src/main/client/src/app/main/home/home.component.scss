@@ -1,11 +1,21 @@
+
+.background
+{
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
+
+}
+.Aqua-blue{background: linear-gradient(to top right, #00aeef, #00e5ff);}
 .Landing_page
 {
   padding-top: 150px;
   padding-bottom: 150px;
+  background-color: #fff;
 }
 .Main_heading
 {
-  color: #424243;
+  color: #fff;
 }
 .Content_column
 {
@@ -15,15 +25,78 @@
   border-right-color: rgba(142, 142, 142, .5);
 
 }
+//Button
+a
+{
+	position: relative;
+	display: block;
+	border-radius: 32px;
+	color: #000;
+	overflow: hidden;
+}
+a:before
+{
+	content: '';
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	transform: translateY(-50%) scale(.6);
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 50%;
+	z-index: -1;
+	transition-property: left, transform;
+	transition-delay: 0s, 0s;
+	transition-duration: 1s,.5s;
+	opacity: 0;
+}
+a:hover
+{
+	color: #fff;
+	transition-delay: .4s;
+}
+a:hover:before
+{
+	left: 10px;
+	transform: translateY(-50%) scale(20);
+	transition-delay: 0s,.5s;
+	opacity: 1;
+}
+a:after
+{
+	content: '';
+	position: absolute;
+	right: 60px;
+	top: 50%;
+	transform: translateY(-50%) scale(.6);
+	width: 10px;
+	height: 10px;
+	background-color: #ff0052;
+	border-radius: 50%;
+	z-index: -1;
+	transition-property: right, transform;
+	transition-delay: 0s, 0s;
+	transition-duration: 1s,.5s;
+	opacity: 0;
+}
+a:hover:after
+{
+	right: 10px;
+	transform: translateY(-50%) scale(20);
+	transition-delay: 0s,.5s;
+	opacity: 1;
+}
+
+//Button ends here
 .Enroll_btn
 {
-  background-color: #00aeef;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 20px;
+  background-color: transparent;
 }
 .Login_btn
 {
-  background-color: #65e796;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -32,6 +105,16 @@
   background-color: rgba(142, 142, 142, .5);
   width: 100%;
   height: 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.Divider_notes
+{
+  background-color: rgba(142, 142, 142, .5);
+  width: 70%;
+  height: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 #hexagon {
 	width: 3vw;
@@ -43,6 +126,70 @@
   margin-left: 95vw;
   margin-top: 65vh;
 }
+//parallax section
+#parallax_bg
+{
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00bcd4;
+}
+//notes_section
+//3d layers on hover
+.con_container
+{
+  margin: 0px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.con
+{
+  position: relative;
+	margin-top: 100px;
+	width: 200px;
+	height: 200px;
+	background: rgba(25,118, 210,.4);
+	transform: rotate(-30deg) skew(25deg) scale(.8);
+	transition: .5s;
+	border-radius: 25px;
+  box-shadow: -4px 4px 5px #1976d2;
+}
+.con img
+{
+  border-radius: 25px;
+  	position: absolute;
+  	width: 100%;
+  	transition: .5s;
+}
+.con:hover img:nth-child(5)
+{
+	transform: translate(100px,-100px);
+	opacity: 1;
+}
+.con:hover img:nth-child(4)
+{
+	transform: translate(80px,-80px);
+	opacity: .8;
+}
+.con:hover img:nth-child(3)
+{
+	transform: translate(60px,-60px);
+	opacity: .6;
+}
+.con:hover img:nth-child(2)
+{
+	transform: translate(40px,-40px);
+	opacity: .4;
+}
+.con:hover img:nth-child(1)
+{
+	transform: translate(20px,-20px);
+	opacity: .2;
+}
+//3d layers on hover ends here
 
 //media-query
 @media (max-width:760px)
@@ -77,5 +224,9 @@
   .Divider
   {
     visibility: hidden;
+  }
+  .Divider_notes
+  {
+    height: 5px;
   }
 }

@@ -1,15 +1,15 @@
-<div>
+<div class="background">
   <!-- Header Conatiner -->
   <div class="row Landing_page">
     <div class="col-md-6 col-12 text-center Content_column">
-      <h2 class="Main_heading">Chemistry-Classes</h2>
+      <img src="{{TITILE_SVG}}" alt="Chemistry_Classes" width="400px" height="150px">
       <div class="row ">
         <div class="col-lg-4 col-12 mx-auto Login">
-            <button type="button" class="btn btn-sm  Enroll_btn">Enroll now</button>
+            <button type="button" class="btn btn-sm Enroll_btn"><a href="#">Enroll now</a></button>
             <div class="Divider"></div>
-            <button type="button" class="btn btn-sm Login_btn">Login</button>
-
+            <button type="button" class="btn btn-sm Login_btn" id="a_button">Login</button>
         </div>
+
       </div>
     </div>
     <div class="col-md-6 col-12 Design_column">
@@ -19,61 +19,110 @@
   </div>
 
   <!-- Parlax Section -->
-  <div>
-    <!--Carousel Wrapper-->
-    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
-      <!--First slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
-          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Light mask</h3>
-          <p>First text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/First slide-->
-      <!--Second slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
-          <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Strong mask</h3>
-          <p>Secondary text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/Second slide-->
-      <!--Third slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
-          <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Slight mask</h3>
-          <p>Third text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/Third slide-->
-    </mdb-carousel>
-    <!--/.Carousel Wrapper-->
+  <div class="row">
+    <div class="col-12" [ngStyle]="{
+      'background-image': 'url('+PARALLAX_IMAGE+')',
+      'background-size': 'cover',
+      'background-repeat': 'no-repeat',
+      'background-attachment': 'fixed',
+      'background-position': 'center'
+    }"id="parallax_bg">
+
+    </div>
   </div>
 
   <!-- Notes Section -->
+  <div class="Divider_notes"></div>
   <div class="row">
     <div class="col-12 text-center">
       <h3>Notes</h3>
       <p class="text-muted">We Provide the best and quality work</p>
     </div>
-
+  </div>
+  <div class="row Aqua-blue">
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 ">
+      <div class="row">
+        <div class="col-12 con_container">
+          <div class="con">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+            <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Notes courasel section -->
     <div>
 
     </div>
-  </div>
 
   <!-- Courses Section -->
   <div>

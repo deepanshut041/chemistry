@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title = 'app';
-  LANDING_IMAGE = "./assets/img_element.png"
-  
+  LANDING_IMAGE = "./assets/"
+  HEADER_BACKGROUND = "./assets/main_bg.jpg"
+  PARALLAX_IMAGE = "./assets/s1.jpg"
+  TITILE_SVG ="./assets/CHEMISTRY_animated.svg"
+  NOTES_IMAGE1 ="./assets/ch1.jpg"
 }
