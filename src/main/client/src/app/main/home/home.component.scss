@@ -1,0 +1,252 @@
+
+.background
+{
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden;
+}
+.Aqua-blue{background: linear-gradient(to bottom right, #673ab7,#64b5f6, #00aeef);}
+.overFlow-y{overflow-y:auto;;}
+.br-2{border-radius: 10px}
+.Landing_page
+{
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #fff;
+
+}
+.Design_column
+{
+  transform: rotate(-30deg) skew(25deg) scale(.8);
+}
+.Main_heading
+{
+  color: #fff;
+}
+.Content_column
+{
+  border: none;
+  border-right-style: solid ;
+  border-right-width: medium;
+  border-right-color: rgba(142, 142, 142, .5);
+
+}
+//Button
+.m
+{
+	position: relative;
+	padding: 10px 15px;
+	box-shadow: 0px 2px 5px #e0e0e0;
+	font-family: sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 10px;
+	display: block;
+	border-radius: 32px;
+	color: #ff0052;
+	overflow: hidden;
+	width: 100px;
+	text-align: center;
+}
+.m:before
+{
+	content: '';
+	position: absolute;
+	left: 70%;
+	top: 50%;
+	transform: translateY(-50%) scale(.6);
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 50%;
+	z-index: -1;
+	transition: left, transform;
+	transition-delay: 0s, 0s;
+	transition-duration: 1s,.5s;
+	opacity: 0;
+}
+.m:hover
+{
+	color: #000;
+	transition-delay: .4s;
+}
+.m:hover:before
+{
+	left: 10%;
+	transform: translateY(-50%) scale(20);
+	transition-delay: 0s,.5s;
+	opacity: 1;
+}
+.m:after
+{
+	content: '';
+	position: absolute;
+	right: 70%;
+	top: 50%;
+	transform: translateY(-50%) scale(.6);
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 50%;
+	z-index: -1;
+	transition: right, transform;
+	transition-delay: 0s, 0s;
+	transition-duration: 1s,.5s;
+	opacity: 0;
+}
+.m:hover:after
+{
+	right: 10%;
+	transform: translateY(-50%) scale(20);
+	transition-delay: 0s,.5s;
+	opacity: 1;
+}
+
+//Button ends here
+.Enroll_btn
+{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.Login_btn
+{
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.Divider
+{
+  background-color: rgba(142, 142, 142, .5);
+  width: 100%;
+  height: 2px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.Divider_bar
+{
+  background-color: rgba(142, 142, 142, .5);
+  width: 70%;
+  height: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 2.5%;
+
+}
+#hexagon {
+	width: 3vw;
+	height: 3vw;
+  border-radius: 1.5vw;
+	background: red;
+	position: fixed;
+  z-index: 1;
+  margin-left: 95vw;
+  margin-top: 65vh;
+}
+//parallax section
+#parallax_bg
+{
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00bcd4;
+}
+//notes_section
+//3d layers on hover
+.con_container
+{
+  margin: 0px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.con
+{
+  position: relative;
+	margin-top: 0px;
+	width: 200px;
+	height: 200px;
+
+	transform: rotate(-30deg) skew(25deg) scale(.8);
+	transition: .5s;
+	border-radius: 25px;
+
+}
+.con img
+{
+  border-radius: 25px;
+  	position: absolute;
+  	width: 100%;
+  	transition: .5s;
+}
+.con:hover img:nth-child(5)
+{
+	transform: translate(100px,-100px);
+	opacity: 1;
+}
+.con:hover img:nth-child(4)
+{
+	transform: translate(80px,-80px);
+	opacity: .8;
+}
+.con:hover img:nth-child(3)
+{
+	transform: translate(60px,-60px);
+	opacity: .6;
+}
+.con:hover img:nth-child(2)
+{
+	transform: translate(40px,-40px);
+	opacity: .4;
+}
+.con:hover img:nth-child(1)
+{
+	transform: translate(20px,-20px);
+	opacity: .2;
+}
+//3d layers on hover ends here
+
+//Video
+#playlists{height: 350px}
+//video/
+
+//media-query
+@media (max-width:760px)
+{
+  .Landing_page
+  {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .Content_column
+  {
+    border: none;
+    border-bottom-style: solid ;
+    border-bottom-width: medium;
+    border-bottom-color: rgba(142, 142, 142, .5);
+    padding: 40px;
+  }
+  .Design_column
+  {
+
+  }
+  .Enroll_btn
+  {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .Login_btn
+  {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .Divider
+  {
+    visibility: hidden;
+  }
+  .Divider_bar
+  {
+    height: 5px;
+  }
+}
