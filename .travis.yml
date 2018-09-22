@@ -1,0 +1,11 @@
+language: java
+jdk:
+- oraclejdk8
+before_script:
+- psql -c 'create database chemistry;' -U postgres
+deploy:
+  provider: heroku
+  app:
+    staging: attriclasses
+  api_key:
+    secure: ItnqURIpyt7h/F0l/Q2tf5HkQLzovUfeL/NinMqAeVC5ZLj7gWWm2UjUrkLdmmBY2aaYWv1qQNtW27WChwnuHZgrsiweKSZw6xQuF6jOCZOiCh1fbT/kcqufVCP/Tg2KLgeaW52Cu/u2GDG2Z0Rt+cRLF07glAkKlyySMQrmDPigFMgKN4kw+7sTpVuu+JYjWLFObuIO3KSdFKLJkviW4HMD0tTiwpUTzcVbxlXnGKUXt7KVuwSbCjGbMXGa8rP0SahNfEQQYIQ6X5WtgZH9meYEVX1KL8RA1kE2l7hw819MMVa4576nF/9kLiEKAIn18BFArQFPMFe6QvFhx16RzkCbYJiwEPSiaj0qDZZdymAr7DBmoS9701gHPxpWrrgNvpV+RPVZyX2TCPGzKpHG5TzIcodIgz5yiDfJSwXeC1i1IvqPK6lUBB1oVrpb0Qr0LdVG3gqlGJm/C/ydf6Pd8m19LJVeJXrUPHdY/XAyrc5dth+WKz3zIcDkJtJaBO5bELU+bPHe7qcm939cUqCpfQYm8Z9bt0IvdP16B2VV3FQ4L18ykKRC4Q/e0kY60ajdUCsjrPS+koWpcr2yjqxLJ0eEWLnPYHDyw9lpphT7Pov5Zx5mW25xqlBnLfWTkfczm8aFpbhrWPZDP0NYHHwKsxKpnz/U8p/3KoPwh0ZD+Uo=

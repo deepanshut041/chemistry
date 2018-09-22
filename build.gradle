@@ -17,7 +17,7 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'in.deepanshutyagi'
 version = '0.0.1'
-sourceCompatibility = 10
+sourceCompatibility = 8
 
 repositories {
 	mavenCentral()
@@ -30,7 +30,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-mail')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	runtime('mysql:mysql-connector-java')
+	compile('javax.xml.bind:jaxb-api:2.3.0')
+	runtime('org.postgresql:postgresql')
 	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
@@ -58,9 +59,9 @@ task buildAngular(type:Exec) {
 	group = BasePlugin.BUILD_GROUP
 	// ng doesn't exist as a file in windows -> ng.cmd
 	if (System.getProperty("os.name").toUpperCase().contains("WINDOWS")){
-		commandLine "ng.cmd", "build"
+		commandLine "npm.cmd", "run", "build"
 	} else {
-		commandLine "ng", "build"
+		commandLine "npm", "run", "build", "--prod"
 	}
 }
 
@@ -72,5 +73,14 @@ task installAngular(type:Exec) {
 		commandLine "npm.cmd", "install"
 	} else {
 		commandLine "npm", "install"
+	}
+}
+
+task stage {
+	dependsOn build
+	doLast {
+		delete fileTree(dir: "build", exclude: "libs")
+		delete fileTree(dir: "build/libs", exclude: "*.jar")
+		delete fileTree(dir: "src/main/client/node_modules")
 	}
 }
