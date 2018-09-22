@@ -13,6 +13,11 @@
   padding-top: 150px;
   padding-bottom: 150px;
   background-color: #fff;
+
+}
+.Design_column
+{
+  transform: rotate(-30deg) skew(25deg) scale(.8);
 }
 .Main_heading
 {
@@ -162,7 +167,7 @@
 	margin-top: 0px;
 	width: 200px;
 	height: 200px;
-	
+
 	transform: rotate(-30deg) skew(25deg) scale(.8);
 	transition: .5s;
 	border-radius: 25px;
