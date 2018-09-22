@@ -1,6 +1,8 @@
 language: java
 jdk:
 - oraclejdk8
+script:
+- chmod +x ./gradlew build connectedCheck
 before_script:
 - psql -c 'create database chemistry;' -U postgres
 deploy:
