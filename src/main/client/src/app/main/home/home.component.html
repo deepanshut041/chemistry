@@ -1,98 +1,487 @@
-<div>
+<div class="background">
   <!-- Header Conatiner -->
-  <div class="row">
-    <div class="col-md-6 col-12">
-      <h3>Header Section</h3>
+  <div class="row Landing_page">
+    <div class="col-md-6 col-12 text-center Content_column">
+      <img src="{{TITILE_SVG}}" alt="Chemistry_Classes" width="400px" height="150px">
+      <div class="row ">
+        <div class="col-lg-4 col-12 mx-auto ">
+          <div><a href="#" class="m">Enroll now</a></div>
+            <div class="Divider"></div>
+            <button type="button" class="btn btn-sm Login_btn">Login</button>
+        </div>
+
+      </div>
     </div>
-    <div class="col-md-6 col-12">
-      <h3>Image Section</h3>
+    <div class="col-md-6 col-12 Design_column">
+      <img src="{{LANDING_IMAGE}}" alt="main_element" width="100%" height="100%">
     </div>
+    <div id="hexagon"> </div>
   </div>
 
   <!-- Parlax Section -->
-  <div>
-    <!--Carousel Wrapper-->
-    <mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
-      <!--First slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
-          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Light mask</h3>
-          <p>First text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/First slide-->
-      <!--Second slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
-          <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Strong mask</h3>
-          <p>Secondary text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/Second slide-->
-      <!--Third slide-->
-      <mdb-carousel-item>
-        <div class="view w-100">
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
-          <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
-        </div>
-        <div class="carousel-caption">
-          <h3 class="h3-responsive">Slight mask</h3>
-          <p>Third text</p>
-        </div>
-      </mdb-carousel-item>
-      <!--/Third slide-->
-    </mdb-carousel>
-    <!--/.Carousel Wrapper-->
+  <div class="row">
+    <div class="col-12" [ngStyle]="{
+      'background-image': 'url('+PARALLAX_IMAGE+')',
+      'background-size': 'cover',
+      'background-repeat': 'no-repeat',
+      'background-attachment': 'fixed',
+      'background-position': 'center'
+    }"id="parallax_bg">
+
+    </div>
   </div>
 
   <!-- Notes Section -->
-  <div class="row">
+
+  <div class="Divider_bar"></div>
+  <div class="row my-2">
     <div class="col-12 text-center">
       <h3>Notes</h3>
-      <p class="text-muted">We Provide the best and quality work</p>
     </div>
-
-    <!-- Notes courasel section -->
-    <div>
-
+  </div>
+  <div class="row justify-content-md-center ">
+    <div class="col-lg-10 col-sm-12 p-3">
+      <div class="row ">
+        <div class="col-sm-6 col-lg-4 my-3">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 my-3">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 my-3">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 my-3">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 my-3 ">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 my-3">
+          <div class="row">
+            <div class="col-12 con_container">
+              <div class="con z-depth-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+                <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Courses Section -->
-  <div>
-    <div class="col-12 text-center">
-      <h3>Course</h3>
-      <p class="text-muted">We Provide the best and quality work</p>
-    </div>
-
     <!-- Notes courasel section -->
     <div>
 
     </div>
 
+  <!-- Courses Section -->
+  <div class="Divider_bar"></div>
+  <div class="row ">
+    <div class="col-12 text-center">
+      <h3>Courses</h3>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-lg-10 col-md-auto col-sm-12 text-center p-2 ">
+
+      <div class="row m-3"> <!--Corses Card row-1 -->
+          <div class="col-lg-3 col-sm-2">
+            <!-- Card-1 -->
+              <div class="card ">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body ">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   </div>
+             </div>
+            <!-- Card-1/ -->
+          </div>
+          <div class="col-lg-3 col-sm-2">
+            <!-- Card-1 -->
+              <div class="card ">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body ">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   </div>
+             </div>
+            <!-- Card-1/ -->
+          </div>
+          <div class="col-lg-3 col-sm-2">
+            <!-- Card-1 -->
+              <div class="card ">
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body ">
+                      <h4 class="card-title">Card title</h4>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   </div>
+             </div>
+            <!-- Card-1/ -->
+          </div>
+          <div class="col-lg-3 col-sm-2">
+          <!-- Card-1 -->
+            <div class="card ">
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                    <a href="#!">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card content -->
+                  <div class="card-body ">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 </div>
+           </div>
+          <!-- Card-1/ -->
+        </div>
+      </div>
+      <div class="row m-3"> <!--Corses Card row-2 -->
+          <div class="col-lg-3 col-sm-2">
+           <!-- Card-1 -->
+             <div class="card ">
+                   <!-- Card image -->
+                   <div class="view overlay">
+                     <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                     <a href="#!">
+                       <div class="mask rgba-white-slight"></div>
+                     </a>
+                   </div>
+                   <!-- Card content -->
+                   <div class="card-body ">
+                     <h4 class="card-title">Card title</h4>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+           <!-- Card-1/ -->
+         </div>
+          <div class="col-lg-3 col-sm-2">
+           <!-- Card-1 -->
+             <div class="card ">
+                   <!-- Card image -->
+                   <div class="view overlay">
+                     <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                     <a href="#!">
+                       <div class="mask rgba-white-slight"></div>
+                     </a>
+                   </div>
+                   <!-- Card content -->
+                   <div class="card-body ">
+                     <h4 class="card-title">Card title</h4>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+           <!-- Card-1/ -->
+         </div>
+          <div class="col-lg-3 col-sm-2">
+           <!-- Card-1 -->
+             <div class="card ">
+                   <!-- Card image -->
+                   <div class="view overlay">
+                     <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                     <a href="#!">
+                       <div class="mask rgba-white-slight"></div>
+                     </a>
+                   </div>
+                   <!-- Card content -->
+                   <div class="card-body ">
+                     <h4 class="card-title">Card title</h4>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+            </div>
+           <!-- Card-1/ -->
+         </div>
+          <div class="col-lg-3 col-sm-2">
+         <!-- Card-1 -->
+           <div class="card ">
+                 <!-- Card image -->
+                 <div class="view overlay">
+                   <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+                   <a href="#!">
+                     <div class="mask rgba-white-slight"></div>
+                   </a>
+                 </div>
+                 <!-- Card content -->
+                 <div class="card-body ">
+                   <h4 class="card-title">Card title</h4>
+                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+          </div>
+         <!-- Card-1/ -->
+       </div>
+      </div>
+    <!-- Notes courasel section -->
+      <div>
+
+      </div>
+
+    </div>
   </div>
 
   <!-- Blog Section -->
-  <div>
+  <div class="Divider_bar"></div>
+  <div class="row my-2">
+    <div class="col-12 text-center">
+      <h3>Blogs</h3>
+    </div>
+  </div>
+  <div class="row justify-content-md-center">
+     <div class="col-lg-10 col-md-auto col-sm-12 z-depth-1">
+      <!--Section: Author Box-->
+      <section class="my-5">
+          <!-- Card header -->
+          <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+            <p class="mr-4 mb-0">About author</p>
+            <ul class="list-unstyled list-inline mb-0">
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-envelope mr-1"></i>Send message</a></li>
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-user mr-1"></i>See profile</a></li>
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-feed mr-1"></i>Follow</a></li>
+            </ul>
+          </div>
+
+          <div class="media mt-4 px-1">
+            <img class="card-img-100 rounded-circle d-flex z-depth-1 mr-3" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="font-weight-bold mt-0">
+                <a class="text-default" href="">Danny Newman</a>
+              </h5>
+              <ul class="list-unstyled list-inline mb-2 pt-1">
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-facebook"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-twitter"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-google-plus"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-linkedin"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-instagram"> </i></a>
+                </li>
+              </ul>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et magnam.
+            </div>
+          </div>
+
+      </section>
+      <!--Section: Author Box-->
+      <!--Section: Author Box-->
+      <section class="my-5">
+          <!-- Card header -->
+          <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+            <p class="mr-4 mb-0">About author</p>
+            <ul class="list-unstyled list-inline mb-0">
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-envelope mr-1"></i>Send message</a></li>
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-user mr-1"></i>See profile</a></li>
+              <li class="list-inline-item"><a href="" class="text-default mr-3"><i class="fa fa-feed mr-1"></i>Follow</a></li>
+            </ul>
+          </div>
+
+          <div class="media mt-4 px-1">
+            <img class="card-img-100 rounded-circle d-flex z-depth-1 mr-3" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(8).jpg" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="font-weight-bold mt-0">
+                <a class="text-default" href="">Danny Newman</a>
+              </h5>
+              <ul class="list-unstyled list-inline mb-2 pt-1">
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-facebook"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-twitter"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-google-plus"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-linkedin"> </i></a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="grey-text mr-1"><i class="fa fa-lg fa-instagram"> </i></a>
+                </li>
+              </ul>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consectetur accusamus velit nostrum et magnam.
+            </div>
+          </div>
+
+      </section>
+      <!--Section: Author Box-->
+     </div>
 
   </div>
 
   <!-- Video Section -->
-  <div>
+  <div class="Divider_bar "></div>
+  <div class="row my-2">
+    <div class="col-12 text-center">
+      <h3>Video Lectures</h3>
+    </div>
+  </div>
+  <div class="row justify-content-md-center p-3 ">
+      <div class="col-lg-10 col-md-auto col-md-10 col-sm-12 z-depth-1 p-2 m-2" >
+        <div class="row  p-3">
+          <div class="col-lg-7 col-md-7 col-sm-12 "><!--main video section-->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-5 col-sm-12 overFlow-y grey lighten-3 " id="playlists" ><!--playlists section-->
+            <div class="row m-3"><!--video-1 & 2-->
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row m-3"><!--video-3 & 4-->
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row m-3"><!--video-5 & 6-->
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row m-3"><!--video-7 & 8-->
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="row m-3"><!--video-9 & 10-->
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
 
+        </div>
+      </div>
   </div>
 
   <!-- Student Review Section-->
   <div>
-
+    <div class="Divider_bar "></div>
+    <div class="row my-2">
+      <div class="col-12 text-center">
+        <h3>Student Reviews</h3>
+      </div>
+    </div>
   </div>
 
   <!-- Location Section-->

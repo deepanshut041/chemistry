@@ -5,6 +5,7 @@ import in.deepanshutyagi.chemistry.json.ApiResponse;
 import in.deepanshutyagi.chemistry.json.JwtAuthenticationResponse;
 import in.deepanshutyagi.chemistry.json.LoginRequest;
 import in.deepanshutyagi.chemistry.json.SignUpRequest;
+import in.deepanshutyagi.chemistry.model.NStep;
 import in.deepanshutyagi.chemistry.model.Role;
 import in.deepanshutyagi.chemistry.model.User;
 import in.deepanshutyagi.chemistry.model.enums.RoleName;
@@ -19,10 +20,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
@@ -47,6 +45,14 @@ public class AuthController {
 
     @Autowired
     JwtTokenProvider tokenProvider;
+
+    @GetMapping("/test")
+    public NStep sample(){
+        NStep nStep = new NStep();
+        nStep.setId((long) 1);
+        return nStep;
+
+    }
 
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
