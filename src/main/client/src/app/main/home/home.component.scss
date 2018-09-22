@@ -4,9 +4,10 @@
   margin: 0;
   padding: 0;
   overflow-x:hidden;
-
 }
-.Aqua-blue{background: linear-gradient(to top right, #00aeef, #00e5ff);}
+.Aqua-blue{background: linear-gradient(to bottom right, #673ab7,#64b5f6, #00aeef);}
+.overFlow-y{overflow-y:auto;;}
+.br-2{border-radius: 10px}
 .Landing_page
 {
   padding-top: 150px;
@@ -26,63 +27,71 @@
 
 }
 //Button
-a
+.m
 {
 	position: relative;
+	padding: 10px 15px;
+	box-shadow: 0px 2px 5px #e0e0e0;
+	font-family: sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 10px;
 	display: block;
 	border-radius: 32px;
-	color: #000;
+	color: #ff0052;
 	overflow: hidden;
+	width: 100px;
+	text-align: center;
 }
-a:before
+.m:before
 {
 	content: '';
 	position: absolute;
-	left: 5px;
-	top: 5px;
+	left: 70%;
+	top: 50%;
 	transform: translateY(-50%) scale(.6);
 	width: 10px;
 	height: 10px;
 	background-color: #000;
 	border-radius: 50%;
 	z-index: -1;
-	transition-property: left, transform;
+	transition: left, transform;
 	transition-delay: 0s, 0s;
 	transition-duration: 1s,.5s;
 	opacity: 0;
 }
-a:hover
+.m:hover
 {
-	color: #fff;
+	color: #000;
 	transition-delay: .4s;
 }
-a:hover:before
+.m:hover:before
 {
-	left: 10px;
+	left: 10%;
 	transform: translateY(-50%) scale(20);
 	transition-delay: 0s,.5s;
 	opacity: 1;
 }
-a:after
+.m:after
 {
 	content: '';
 	position: absolute;
-	right: 60px;
+	right: 70%;
 	top: 50%;
 	transform: translateY(-50%) scale(.6);
 	width: 10px;
 	height: 10px;
-	background-color: #ff0052;
+	background-color: #000;
 	border-radius: 50%;
 	z-index: -1;
-	transition-property: right, transform;
+	transition: right, transform;
 	transition-delay: 0s, 0s;
 	transition-duration: 1s,.5s;
 	opacity: 0;
 }
-a:hover:after
+.m:hover:after
 {
-	right: 10px;
+	right: 10%;
 	transform: translateY(-50%) scale(20);
 	transition-delay: 0s,.5s;
 	opacity: 1;
@@ -108,13 +117,15 @@ a:hover:after
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.Divider_notes
+.Divider_bar
 {
   background-color: rgba(142, 142, 142, .5);
   width: 70%;
   height: 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  margin-top: 2.5%;
+
 }
 #hexagon {
 	width: 3vw;
@@ -148,14 +159,14 @@ a:hover:after
 .con
 {
   position: relative;
-	margin-top: 100px;
+	margin-top: 0px;
 	width: 200px;
 	height: 200px;
-	background: rgba(25,118, 210,.4);
+	
 	transform: rotate(-30deg) skew(25deg) scale(.8);
 	transition: .5s;
 	border-radius: 25px;
-  box-shadow: -4px 4px 5px #1976d2;
+
 }
 .con img
 {
@@ -191,6 +202,10 @@ a:hover:after
 }
 //3d layers on hover ends here
 
+//Video
+#playlists{height: 350px}
+//video/
+
 //media-query
 @media (max-width:760px)
 {
@@ -225,7 +240,7 @@ a:hover:after
   {
     visibility: hidden;
   }
-  .Divider_notes
+  .Divider_bar
   {
     height: 5px;
   }

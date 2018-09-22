@@ -11,5 +11,5 @@ export class HomeComponent {
   HEADER_BACKGROUND = "./assets/main_bg.jpg"
   PARALLAX_IMAGE = "./assets/s1.jpg"
   TITILE_SVG ="./assets/CHEMISTRY_animated.svg"
-  NOTES_IMAGE1 ="./assets/ch1.jpg"
+  NOTES_IMAGE1 ="./assets/ch1.png"
 }
