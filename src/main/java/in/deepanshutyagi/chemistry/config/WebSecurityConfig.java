@@ -18,10 +18,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.header.writers.frameoptions.WhiteListedAllowFromStrategy;
-import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
 
-import java.util.Arrays;
+
 
 
 @Configuration
@@ -64,7 +62,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(new WhiteListedAllowFromStrategy(Arrays.asList("attriclasses.erevna.in"))));
+        http.headers().frameOptions().disable();
         http
                 .cors()
                 .and()
