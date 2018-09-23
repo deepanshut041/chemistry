@@ -46,14 +46,6 @@ public class AuthController {
     @Autowired
     JwtTokenProvider tokenProvider;
 
-    @GetMapping("/test")
-    public NStep sample(){
-        NStep nStep = new NStep();
-        nStep.setId((long) 1);
-        return nStep;
-
-    }
-
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
