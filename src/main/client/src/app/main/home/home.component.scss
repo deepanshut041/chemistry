@@ -5,7 +5,7 @@
   padding: 0;
   overflow-x:hidden;
 }
-.Aqua-blue{background: linear-gradient(to bottom right, #673ab7,#64b5f6, #00aeef);}
+.Aqua-blue{background: linear-gradient(to bottom right, #673ab7, #00aeef);}
 .overFlow-y{overflow-y:auto;;}
 .br-2{border-radius: 10px}
 .Landing_page
@@ -17,7 +17,14 @@
 }
 .Design_column
 {
-  transform: rotate(-30deg) skew(25deg) scale(.8);
+  height: 400px;
+  width: 400px;
+  animation-name: chemistryDesign;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes chemistryDesign {
+
 }
 .Main_heading
 {
@@ -26,88 +33,88 @@
 .Content_column
 {
   border: none;
-  border-right-style: solid ;
-  border-right-width: medium;
-  border-right-color: rgba(142, 142, 142, .5);
+  border-left-style: solid ;
+  border-left-width: medium;
+  border-left-color: rgba(142, 142, 142, .5);
 
 }
 //Button
-.m
-{
-	position: relative;
-	padding: 10px 15px;
-	box-shadow: 0px 2px 5px #e0e0e0;
-	font-family: sans-serif;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 10px;
-	display: block;
-	border-radius: 32px;
-	color: #ff0052;
-	overflow: hidden;
-	width: 100px;
-	text-align: center;
-}
-.m:before
-{
-	content: '';
-	position: absolute;
-	left: 70%;
-	top: 50%;
-	transform: translateY(-50%) scale(.6);
-	width: 10px;
-	height: 10px;
-	background-color: #000;
-	border-radius: 50%;
-	z-index: -1;
-	transition: left, transform;
-	transition-delay: 0s, 0s;
-	transition-duration: 1s,.5s;
-	opacity: 0;
-}
-.m:hover
-{
-	color: #000;
-	transition-delay: .4s;
-}
-.m:hover:before
-{
-	left: 10%;
-	transform: translateY(-50%) scale(20);
-	transition-delay: 0s,.5s;
-	opacity: 1;
-}
-.m:after
-{
-	content: '';
-	position: absolute;
-	right: 70%;
-	top: 50%;
-	transform: translateY(-50%) scale(.6);
-	width: 10px;
-	height: 10px;
-	background-color: #000;
-	border-radius: 50%;
-	z-index: -1;
-	transition: right, transform;
-	transition-delay: 0s, 0s;
-	transition-duration: 1s,.5s;
-	opacity: 0;
-}
-.m:hover:after
-{
-	right: 10%;
-	transform: translateY(-50%) scale(20);
-	transition-delay: 0s,.5s;
-	opacity: 1;
-}
+// .m
+// {
+// 	position: relative;
+// 	padding: 10px 15px;
+// 	box-shadow: 0px 2px 5px #e0e0e0;
+// 	font-family: sans-serif;
+// 	text-decoration: none;
+// 	text-transform: uppercase;
+// 	font-size: 10px;
+// 	display: block;
+// 	border-radius: 32px;
+// 	color: #ff0052;
+// 	overflow: hidden;
+// 	width: 100px;
+// 	text-align: center;
+// }
+// .m:before
+// {
+// 	content: '';
+// 	position: absolute;
+// 	left: 70%;
+// 	top: 50%;
+// 	transform: translateY(-50%) scale(.6);
+// 	width: 10px;
+// 	height: 10px;
+// 	background-color: #000;
+// 	border-radius: 50%;
+// 	z-index: -1;
+// 	transition: left, transform;
+// 	transition-delay: 0s, 0s;
+// 	transition-duration: 1s,.5s;
+// 	opacity: 0;
+// }
+// .m:hover
+// {
+// 	color: #000;
+// 	transition-delay: .4s;
+// }
+// .m:hover:before
+// {
+// 	left: 10%;
+// 	transform: translateY(-50%) scale(20);
+// 	transition-delay: 0s,.5s;
+// 	opacity: 1;
+// }
+// .m:after
+// {
+// 	content: '';
+// 	position: absolute;
+// 	right: 70%;
+// 	top: 50%;
+// 	transform: translateY(-50%) scale(.6);
+// 	width: 10px;
+// 	height: 10px;
+// 	background-color: #000;
+// 	border-radius: 50%;
+// 	z-index: -1;
+// 	transition: right, transform;
+// 	transition-delay: 0s, 0s;
+// 	transition-duration: 1s,.5s;
+// 	opacity: 0;
+// }
+// .m:hover:after
+// {
+// 	right: 10%;
+// 	transform: translateY(-50%) scale(20);
+// 	transition-delay: 0s,.5s;
+// 	opacity: 1;
+// }
 
 //Button ends here
 .Enroll_btn
 {
   margin-top: 50px;
   margin-bottom: 20px;
-  background-color: transparent;
+  
 }
 .Login_btn
 {
