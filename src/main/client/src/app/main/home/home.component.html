@@ -1,21 +1,30 @@
 <div class="background">
   <!-- Header Conatiner -->
-  <div class="row Landing_page">
-    <div class="col-md-6 col-12 text-center Content_column">
-      <img src="{{TITILE_SVG}}" alt="Chemistry_Classes" width="400px" height="150px">
-      <div class="row ">
-        <div class="col-lg-4 col-12 mx-auto ">
-          <div><a href="#" class="m">Enroll now</a></div>
-            <div class="Divider"></div>
-            <button type="button" class="btn btn-sm Login_btn">Login</button>
-        </div>
-
-      </div>
-    </div>
-    <div class="col-md-6 col-12 Design_column">
+  <div class="row Landing_page" [ngStyle]="{
+    'background-image': 'url('+HEADER_BACKGROUND+')',
+    'background-size': 'cover',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center'
+  }">
+    <div class="col-lg-6 col-12 Design_column">
       <img src="{{LANDING_IMAGE}}" alt="main_element" width="100%" height="100%">
     </div>
-    <div id="hexagon"> </div>
+    <!------>
+    <div class="col-lg-6 col-12 text-center Content_column">
+      <div class="row ">
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-4 col-12 mx-auto ">
+            <div class="row">
+                <img src="{{TITILE_SVG}}" alt="Chemistry_Classes" width="400px" height="150px">
+            </div>
+            <button class="btn aqua-gradient btn-sm Register_btn ">Register</button>
+            <button class="btn aqua-gradient btn-sm Login_btn ">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="hexagon"> </div> -->
   </div>
 
   <!-- Parlax Section -->
@@ -42,10 +51,10 @@
   <div class="row justify-content-md-center ">
     <div class="col-lg-10 col-sm-12 p-3">
       <div class="row ">
-        <div class="col-sm-6 col-lg-4 my-3">
+        <div class="col-lg-4 col-sm-6  my-5">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -55,10 +64,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 my-3">
+        <div class="col-lg-4 col-sm-6 my-5">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -68,10 +77,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 my-3">
+        <div class="col-lg-4 col-sm-6 my-5">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -81,10 +90,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 my-3">
+        <div class="col-lg-4 col-sm-6 my-5">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -94,10 +103,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 my-3 ">
+        <div class="col-lg-4 col-sm-6 my-5 ">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -107,10 +116,10 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-4 my-3">
+        <div class=" col-lg-4 col-sm-6 my-5">
           <div class="row">
             <div class="col-12 con_container">
-              <div class="con z-depth-1">
+              <div class="con z-depth-1 grey darken-3">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
                 <img src="{{NOTES_IMAGE1}}" alt="Chapter-1">
@@ -137,10 +146,10 @@
     </div>
   </div>
   <div class="row justify-content-md-center">
-    <div class="col-lg-10 col-md-auto col-sm-12 text-center p-2 ">
+    <div class="col-lg-10 col-md-auto col-sm-12 text-center p-2 my-3">
 
-      <div class="row m-3"> <!--Corses Card row-1 -->
-          <div class="col-lg-3 col-sm-2">
+      <div class="row my-5"> <!--Courses Card row-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
             <!-- Card-1 -->
               <div class="card ">
                     <!-- Card image -->
@@ -158,8 +167,8 @@
              </div>
             <!-- Card-1/ -->
           </div>
-          <div class="col-lg-3 col-sm-2">
-            <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+            <!-- Card-2 -->
               <div class="card ">
                     <!-- Card image -->
                     <div class="view overlay">
@@ -174,10 +183,10 @@
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                    </div>
              </div>
-            <!-- Card-1/ -->
+            <!-- Card-2/ -->
           </div>
-          <div class="col-lg-3 col-sm-2">
-            <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+            <!-- Card-3 -->
               <div class="card ">
                     <!-- Card image -->
                     <div class="view overlay">
@@ -192,10 +201,10 @@
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                    </div>
              </div>
-            <!-- Card-1/ -->
+            <!-- Card-3/ -->
           </div>
-          <div class="col-lg-3 col-sm-2">
-          <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+          <!-- Card-4 -->
             <div class="card ">
                   <!-- Card image -->
                   <div class="view overlay">
@@ -210,11 +219,11 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                  </div>
            </div>
-          <!-- Card-1/ -->
+          <!-- Card-4/ -->
         </div>
       </div>
-      <div class="row m-3"> <!--Corses Card row-2 -->
-          <div class="col-lg-3 col-sm-2">
+      <div class="row my-5"> <!--Courses Card row-2 -->
+          <div class="col-lg-3 col-sm-2 my-1">
            <!-- Card-1 -->
              <div class="card ">
                    <!-- Card image -->
@@ -232,8 +241,8 @@
             </div>
            <!-- Card-1/ -->
          </div>
-          <div class="col-lg-3 col-sm-2">
-           <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+           <!-- Card-2 -->
              <div class="card ">
                    <!-- Card image -->
                    <div class="view overlay">
@@ -248,10 +257,10 @@
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
             </div>
-           <!-- Card-1/ -->
+           <!-- Card-2/ -->
          </div>
-          <div class="col-lg-3 col-sm-2">
-           <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+           <!-- Card-3 -->
              <div class="card ">
                    <!-- Card image -->
                    <div class="view overlay">
@@ -266,10 +275,10 @@
                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
             </div>
-           <!-- Card-1/ -->
+           <!-- Card-3/ -->
          </div>
-          <div class="col-lg-3 col-sm-2">
-         <!-- Card-1 -->
+          <div class="col-lg-3 col-sm-2 my-1">
+         <!-- Card-4 -->
            <div class="card ">
                  <!-- Card image -->
                  <div class="view overlay">
@@ -284,7 +293,7 @@
                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
           </div>
-         <!-- Card-1/ -->
+         <!-- Card-4/ -->
        </div>
       </div>
     <!-- Notes courasel section -->
@@ -391,84 +400,20 @@
   </div>
 
   <!-- Video Section -->
-  <div class="Divider_bar "></div>
+  <div class="Divider_bar"></div>
   <div class="row my-2">
     <div class="col-12 text-center">
       <h3>Video Lectures</h3>
     </div>
   </div>
   <div class="row justify-content-md-center p-3 ">
-      <div class="col-lg-10 col-md-auto col-md-10 col-sm-12 z-depth-1 p-2 m-2" >
-        <div class="row  p-3">
-          <div class="col-lg-7 col-md-7 col-sm-12 "><!--main video section-->
+      <div class="col-lg-10 col-md-auto col-md-10 col-sm-12 z-depth-1 p-2 m-2 grey darken-3" >
+        <div class="row justify-content-md-center p-3">
+          <div class="col-lg-12 col-md-12 col-sm-10 col-md-auto"><!--main video section-->
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
             </div>
           </div>
-          <div class="col-lg-5 col-md-5 col-sm-12 overFlow-y grey lighten-3 " id="playlists" ><!--playlists section-->
-            <div class="row m-3"><!--video-1 & 2-->
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="row m-3"><!--video-3 & 4-->
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="row m-3"><!--video-5 & 6-->
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="row m-3"><!--video-7 & 8-->
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="row m-3"><!--video-9 & 10-->
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
 
         </div>
       </div>
