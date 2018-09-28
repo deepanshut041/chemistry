@@ -1,13 +1,8 @@
 {
   "name": "chemistry",
   "version": "0.0.0",
-  "scripts": {
-  },
+  "scripts": { },
   "private": true,
-  "dependencies": {
-
-  },
-  "devDependencies": {
-
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
