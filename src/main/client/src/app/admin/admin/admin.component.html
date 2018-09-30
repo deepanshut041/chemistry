@@ -1,0 +1,131 @@
+<!--<div id="portalLoader">-->
+<!--<app-loader></app-loader>-->
+<!--</div>-->
+<div>
+  <header class="header">
+    <div class="sidebar-toggle-box" (click)="hideAsideMenu(sidebar)">
+      <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+    </div>
+    <a routerLink="../" class="logo">
+      <b>Attri Classes
+      </b>
+    </a>
+    <div class="top-menu">
+      <ul class="nav pull-right top-menu">
+        <li>
+          <a class="logout" (click)="onLogout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <aside>
+    <div class="nav-collapse" tabindex="5000" id="sidebar" #sidebar>
+      <ul class="sidebar-menu" id="nav-accordion">
+        <p class="centered">
+          <a>
+            <img class="img-cricle">
+          </a>
+        </p>
+        <h5 class="centered">Admin</h5>
+        <li class="mt">
+          <a routerLink="./" [ngClass]="{'active': status === 'dashboard'}" (click)="status='dashboard'">
+            <i class="fa fa-dashboard"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="sub-menu parent-li">
+          <div (click)="expandSubMenu(settingsMenu)">
+            <a [ngClass]="{'active': status === 'setting'}" (click)="status='setting'">
+              <i class="fa fa-cog"></i>
+              <span>Courses</span>
+            </a>
+          </div>
+          <ul class="sub" #settingsMenu>
+            <li>
+              <a routerLink="./courses/add" [ngClass]="{'active': settings === 'insdetail'}" (click)="settings='insdetail'">Add Courses</a>
+            </li>
+            <li>
+              <a routerLink="./courses/list" [ngClass]="{'active': settings === 'admdetail'}" (click)="settings='admdetail'">List Courses</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sub-menu parent-li">
+          <div (click)="expandSubMenu(academicMenu)">
+            <a [ngClass]="{'active': status === 'academic'}" (click)="status='academic'">
+              <i class="fa fa-users"></i>
+              <span>Blogs</span>
+            </a>
+          </div>
+          <ul class="sub" #academicMenu>
+            <li>
+              <a routerLink="./blogs/add" [ngClass]="{'active': academics === 'coursebatch'}" (click)="academics='coursebatch'">Add Blogs</a>
+            </li>
+            <li>
+              <a routerLink="./bloga/list" [ngClass]="{'active': academics === 'subjects'}" (click)="academics='subjects'">List Bloga</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sub-menu parent-li">
+          <div (click)="expandSubMenu(studentMenu)">
+            <a [ngClass]="{'active': status === 'student'}" (click)="status='student'">
+              <i class="fa fa-user"></i>
+              <span>Exam</span>
+            </a>
+          </div>
+          <ul class="sub" #studentMenu>
+            <li>
+              <a routerLink="./exam/add" [ngClass]="{'active': students === 'studentadmission'}" (click)="students='studentadmission'">Add Exam</a>
+            </li>
+            <li>
+              <a routerLink="./exam/list" [ngClass]="{'active': students === 'studentlist'}" (click)="students='studentlist'">List Exam</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sub-menu parent-li">
+          <div (click)="expandSubMenu(performanceMenu)">
+            <a [ngClass]="{'active': status === 'performance'}" (click)="status='performance'">
+              <i class="fa fa-signal"></i>
+              <span>Performance</span>
+            </a>
+          </div>
+          <ul class="sub" #performanceMenu>
+            <li>
+              <a routerLink="./performance/student" [ngClass]="{'active': performances === 'studentperformance'}" (click)="performances='studentperformance'">Student Performance</a>
+            </li>
+            <li>
+              <a routerLink="./performance/class" [ngClass]="{'active': performances === 'classperformance'}" (click)="performances='classperformance'">Class Performance</a>
+            </li>
+            <li>
+              <a routerLink="./performance/subject" [ngClass]="{'active': performances === 'subjectperformance'}" (click)="performances='subjectperformance'">Subject Performance</a>
+            </li>
+            <li>
+              <a routerLink="./performance/teacher" [ngClass]="{'active': performances === 'teacherperformance'}" (click)="performances='teacherperformance'">Teacher Performance</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sub-menu parent-li">
+          <div (click)="expandSubMenu(taskManager)">
+            <a [ngClass]="{'active': status === 'manager'}" (click)="status='manager'">
+              <i class="fa fa-tasks"></i>
+              <span>Task Manager</span>
+            </a>
+          </div>
+          <ul class="sub" #taskManager>
+            <li>
+              <a [ngClass]="{'active': taskmanager === 'assigntask'}" (click)="taskmanager='assigntask'">Assign Task</a>
+            </li>
+            <li>
+              <a [ngClass]="{'active': taskmanager === 'taskdetail'}" (click)="taskmanager='taskdetail'">Task Detail</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <article id="main-container">
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </article>
+</div>
