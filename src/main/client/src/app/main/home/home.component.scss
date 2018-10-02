@@ -8,6 +8,7 @@
 .Aqua-blue{background: linear-gradient(to bottom right, #673ab7, #00aeef);}
 .overFlow-y{overflow-y:auto;;}
 .br-2{border-radius: 10px}
+.font-size-2{font-size: 4vw; font-weight: lighter;}
 .Landing_page
 {
   padding-top: 150px;
@@ -135,16 +136,17 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.Divider_bar
+.Divider_bar_one
 {
-  background-color: rgba(142, 142, 142, .5);
-  width: 70%;
+  background-color: rgba(66, 66, 66, 1);
+  width: 45%;
   height: 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-top: 2.5%;
 
 }
+
 #hexagon {
 	width: 3vw;
 	height: 3vw;
@@ -273,4 +275,5 @@
      height: 50px;
     font-size: 5vw;
    }
+
 }

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   title = 'app';
+  LOGO_SVG = "./assets/logo-chemistry.svg"
 }
