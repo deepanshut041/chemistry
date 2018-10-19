@@ -8,11 +8,17 @@
 .Aqua-blue{background: linear-gradient(to bottom right, #673ab7, #00aeef);}
 .overFlow-y{overflow-y:auto;;}
 .br-2{border-radius: 10px}
+.font-size-2{font-size: 4vw; font-weight: lighter;}
 .Landing_page
 {
   padding-top: 150px;
   padding-bottom: 150px;
   background-color: #fff;
+}
+.landing_image_responsive
+{
+  width: 100%;
+  height: 100%;
 }
 .Design_column
 {
@@ -130,16 +136,17 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.Divider_bar
+.Divider_bar_one
 {
-  background-color: rgba(142, 142, 142, .5);
-  width: 70%;
+  background-color: rgba(66, 66, 66, 1);
+  width: 45%;
   height: 10px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   margin-top: 2.5%;
 
 }
+
 #hexagon {
 	width: 3vw;
 	height: 3vw;
@@ -224,28 +231,8 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .Content_column
-  {
-    border: none;
-    border-bottom-style: solid ;
-    border-bottom-width: medium;
-    border-bottom-color: rgba(142, 142, 142, .5);
-    padding: 40px;
-  }
-  .Design_column
-  {
 
-  }
-  .Enroll_btn
-  {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  .Login_btn
-  {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
+
   .Divider
   {
     visibility: hidden;
@@ -254,4 +241,39 @@
   {
     height: 5px;
   }
+}
+@media (max-width:480px)
+{
+  .Landing_page
+  {
+    height: 100vh;
+  }
+  .landing_image_responsive
+  {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .Design_column
+  {
+    height: 200px;
+  }
+  .title_img_responsive
+  {
+     visibility: collapse;
+   }
+   .Register_btn
+   {
+     margin-top: 10px;
+     width: 300px;
+     height: 50px;
+     font-size: 5vw;
+   }
+   .Login_btn
+   {
+     margin-top: 5px;
+     width: 300px;
+     height: 50px;
+    font-size: 5vw;
+   }
+
 }
