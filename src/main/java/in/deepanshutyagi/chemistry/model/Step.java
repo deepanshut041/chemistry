@@ -19,6 +19,9 @@ public class Step {
     @Column(length = 20)
     private StepType type;
 
+    @Column(name = "rank")
+    private int rank;
+
     private String videoLink;
 
     private String text;
