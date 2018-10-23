@@ -55,6 +55,9 @@ public class Course {
     @JoinColumn(name = "instructor_id")
     private User user;
 
+    @Column(name = "cover_image")
+    private String coverImage;
+
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Enrollment> enrollments;
 
@@ -164,5 +167,13 @@ public class Course {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public String getCoverImage() {
+        return coverImage;
+    }
+
+    public void setCoverImage(String coverImage) {
+        this.coverImage = coverImage;
     }
 }

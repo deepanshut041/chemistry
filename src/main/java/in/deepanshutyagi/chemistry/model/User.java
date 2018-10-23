@@ -53,6 +53,12 @@ public class User extends DateAudit {
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Course> courses;
 
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<Post> posts;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<Comment> comments;
+
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     private Instructor instructor;
@@ -60,6 +66,9 @@ public class User extends DateAudit {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     private Student student;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<NStep> nSteps;
 
     public User() {
 
@@ -150,5 +159,29 @@ public class User extends DateAudit {
 
     public void setStudent(Student student) {
         this.student = student;
+    }
+
+    public Set<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(Set<Post> posts) {
+        this.posts = posts;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public Set<NStep> getnSteps() {
+        return nSteps;
+    }
+
+    public void setnSteps(Set<NStep> nSteps) {
+        this.nSteps = nSteps;
     }
 }

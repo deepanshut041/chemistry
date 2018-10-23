@@ -1,4 +1,57 @@
 package in.deepanshutyagi.chemistry.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import java.util.Set;
+
+@Entity
+@Table(name = "post_category")
 public class PCategory {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
+
+    @NotEmpty(message = "*Please provide an title")
+    @Column(name = "title")
+    private String title;
+
+    @NotEmpty(message = "*Please provide a description")
+    @Column(columnDefinition="TEXT", name = "description")
+    private String description;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private Set<Post> posts;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Set<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(Set<Post> posts) {
+        this.posts = posts;
+    }
 }
