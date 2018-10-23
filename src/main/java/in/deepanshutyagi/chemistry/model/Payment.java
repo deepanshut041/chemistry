@@ -1,5 +1,4 @@
 package in.deepanshutyagi.chemistry.model;
 
-public class Student {
-
+public class Payment {
 }

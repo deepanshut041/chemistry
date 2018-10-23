@@ -61,9 +61,6 @@ public class Course {
     @OneToMany(fetch = FetchType.LAZY)
     private Set<Module> modules;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Feedback> feedbacks;
-
 
     public Long getId() {
         return id;
@@ -143,14 +140,6 @@ public class Course {
 
     public void setModules(Set<Module> modules) {
         this.modules = modules;
-    }
-
-    public Set<Feedback> getFeedbacks() {
-        return feedbacks;
-    }
-
-    public void setFeedbacks(Set<Feedback> feedbacks) {
-        this.feedbacks = feedbacks;
     }
 
     public String getTrailerLink() {
