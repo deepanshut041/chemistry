@@ -5,6 +5,8 @@ import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -39,7 +41,7 @@ public class Post {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private Category category;
+    private PCategory pCategory;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "creator_id")
@@ -49,8 +51,8 @@ public class Post {
             fetch = FetchType.LAZY)
     private PostDetail postDetail;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Comment> comments;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "post")
+    private List<Comment> comments = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -108,12 +110,12 @@ public class Post {
         isActive = active;
     }
 
-    public Category getCategory() {
-        return category;
+    public PCategory getpCategory() {
+        return pCategory;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setpCategory(PCategory pCategory) {
+        this.pCategory = pCategory;
     }
 
     public User getUser() {
@@ -132,11 +134,11 @@ public class Post {
         this.postDetail = postDetail;
     }
 
-    public Set<Comment> getComments() {
+    public List<Comment> getComments() {
         return comments;
     }
 
-    public void setComments(Set<Comment> comments) {
+    public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
 }

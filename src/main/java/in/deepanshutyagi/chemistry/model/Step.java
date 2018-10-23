@@ -4,6 +4,8 @@ import in.deepanshutyagi.chemistry.model.enums.StepType;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,8 +37,8 @@ public class Step {
     @JoinColumn(name = "module_id")
     private Module module;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Progress> progresses;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "step")
+    private List<Progress> progresses = new ArrayList<>();
 
     public Step() {
     }
@@ -97,11 +99,11 @@ public class Step {
         this.module = module;
     }
 
-    public Set<Progress> getProgresses() {
+    public List<Progress> getProgresses() {
         return progresses;
     }
 
-    public void setProgresses(Set<Progress> progresses) {
+    public void setProgresses(List<Progress> progresses) {
         this.progresses = progresses;
     }
 }

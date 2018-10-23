@@ -2,6 +2,8 @@ package in.deepanshutyagi.chemistry.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -27,8 +29,8 @@ public class Module {
     @JoinColumn(name = "course_id")
     private Course course;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Step> steps;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "module")
+    private List<Step> steps = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -70,11 +72,11 @@ public class Module {
         this.course = course;
     }
 
-    public Set<Step> getSteps() {
+    public List<Step> getSteps() {
         return steps;
     }
 
-    public void setSteps(Set<Step> steps) {
+    public void setSteps(List<Step> steps) {
         this.steps = steps;
     }
 }

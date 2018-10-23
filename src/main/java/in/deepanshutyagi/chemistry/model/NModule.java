@@ -2,6 +2,8 @@ package in.deepanshutyagi.chemistry.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -15,8 +17,8 @@ public class NModule {
     @Column(name = "title")
     private String title;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<NStep> nSteps;
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "nModule")
+    private List<NStep> nSteps = new ArrayList<>();
 
 
     public Long getId() {
@@ -35,11 +37,11 @@ public class NModule {
         this.title = title;
     }
 
-    public Set<NStep> getnSteps() {
+    public List<NStep> getnSteps() {
         return nSteps;
     }
 
-    public void setnSteps(Set<NStep> nSteps) {
+    public void setnSteps(List<NStep> nSteps) {
         this.nSteps = nSteps;
     }
 }

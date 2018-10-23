@@ -6,7 +6,9 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -47,17 +49,17 @@ public class User extends DateAudit {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Enrollment> enrollments;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Enrollment> enrollments = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Course> courses;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Course> courses = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Post> posts;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Post> posts = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Comment> comments;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<Comment> comments = new ArrayList<>();
 
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
@@ -67,8 +69,8 @@ public class User extends DateAudit {
             fetch = FetchType.LAZY)
     private Student student;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<NStep> nSteps;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    private List<NStep> nSteps = new ArrayList<>();
 
     public User() {
 
@@ -129,20 +131,36 @@ public class User extends DateAudit {
         this.roles = roles;
     }
 
-    public Set<Enrollment> getEnrollments() {
+    public List<Enrollment> getEnrollments() {
         return enrollments;
     }
 
-    public void setEnrollments(Set<Enrollment> enrollments) {
+    public void setEnrollments(List<Enrollment> enrollments) {
         this.enrollments = enrollments;
     }
 
-    public Set<Course> getCourses() {
+    public List<Course> getCourses() {
         return courses;
     }
 
-    public void setCourses(Set<Course> courses) {
+    public void setCourses(List<Course> courses) {
         this.courses = courses;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public Instructor getInstructor() {
@@ -161,27 +179,11 @@ public class User extends DateAudit {
         this.student = student;
     }
 
-    public Set<Post> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(Set<Post> posts) {
-        this.posts = posts;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public Set<NStep> getnSteps() {
+    public List<NStep> getnSteps() {
         return nSteps;
     }
 
-    public void setnSteps(Set<NStep> nSteps) {
+    public void setnSteps(List<NStep> nSteps) {
         this.nSteps = nSteps;
     }
 }

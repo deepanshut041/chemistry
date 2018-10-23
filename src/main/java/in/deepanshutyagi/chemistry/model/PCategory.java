@@ -2,6 +2,8 @@ package in.deepanshutyagi.chemistry.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,8 +22,8 @@ public class PCategory {
     @Column(columnDefinition="TEXT", name = "description")
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Post> posts;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pCategory")
+    private List<Post> posts = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -47,11 +49,11 @@ public class PCategory {
         this.description = description;
     }
 
-    public Set<Post> getPosts() {
+    public List<Post> getPosts() {
         return posts;
     }
 
-    public void setPosts(Set<Post> posts) {
+    public void setPosts(List<Post> posts) {
         this.posts = posts;
     }
 }

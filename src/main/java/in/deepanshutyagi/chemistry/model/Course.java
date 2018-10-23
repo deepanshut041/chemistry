@@ -3,6 +3,8 @@ package in.deepanshutyagi.chemistry.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -58,11 +60,11 @@ public class Course {
     @Column(name = "cover_image")
     private String coverImage;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Enrollment> enrollments;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "course")
+    private List<Enrollment> enrollments = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Module> modules;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "course")
+    private List<Module> modules = new ArrayList<>();
 
 
     public Long getId() {
@@ -129,19 +131,19 @@ public class Course {
         this.user = user;
     }
 
-    public Set<Enrollment> getEnrollments() {
+    public List<Enrollment> getEnrollments() {
         return enrollments;
     }
 
-    public void setEnrollments(Set<Enrollment> enrollments) {
+    public void setEnrollments(List<Enrollment> enrollments) {
         this.enrollments = enrollments;
     }
 
-    public Set<Module> getModules() {
+    public List<Module> getModules() {
         return modules;
     }
 
-    public void setModules(Set<Module> modules) {
+    public void setModules(List<Module> modules) {
         this.modules = modules;
     }
 

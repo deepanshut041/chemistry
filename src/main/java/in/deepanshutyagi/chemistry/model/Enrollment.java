@@ -4,6 +4,8 @@ import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,12 +25,16 @@ public class Enrollment {
     @JoinColumn(name = "course_id")
     private Course course;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     @OneToOne(mappedBy = "enrollment", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     private Feedback feedback;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    private Set<Progress> progresses;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "enrollment")
+    private List<Progress> progresses = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -62,11 +68,19 @@ public class Enrollment {
         this.feedback = feedback;
     }
 
-    public Set<Progress> getProgresses() {
+    public List<Progress> getProgresses() {
         return progresses;
     }
 
-    public void setProgresses(Set<Progress> progresses) {
+    public void setProgresses(List<Progress> progresses) {
         this.progresses = progresses;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
