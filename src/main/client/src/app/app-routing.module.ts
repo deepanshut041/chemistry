@@ -9,6 +9,7 @@ import {BlogListComponent} from "./main/blog/list/blog-list.component";
 import {ContactComponent} from "./main/contact/contact.component";
 import {NotesComponent} from "./main/notes/notes.component";
 import {CoursesComponent} from "./main/courses/courses.component";
+import { CourseComponent } from "./main/course/course.component";
 
 
 const routes:Routes =[
@@ -23,7 +24,9 @@ const routes:Routes =[
         ]},
       {path: 'contact', component:ContactComponent},
       {path: 'notes', component: NotesComponent},
-      {path:'courses', component:CoursesComponent}
+      {path:'courses', component:CoursesComponent},
+      {path:'courses/:id', component:CourseComponent}
+      
     ]
   },
   // {

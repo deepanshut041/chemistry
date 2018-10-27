@@ -27,7 +27,7 @@
             <img class="img-cricle">
           </a>
         </p>
-        <h5 class="centered">Admin</h5>
+        <h5 class="centered">Deepanshu Tyagi</h5>
         <li class="mt">
           <a routerLink="./" [ngClass]="{'active': status === 'dashboard'}" (click)="status='dashboard'">
             <i class="fa fa-dashboard"></i>
@@ -91,16 +91,10 @@
           </div>
           <ul class="sub" #performanceMenu>
             <li>
-              <a routerLink="./performance/student" [ngClass]="{'active': performances === 'studentperformance'}" (click)="performances='studentperformance'">Student Performance</a>
+              <a routerLink="./performance/student" [ngClass]="{'active': performances === 'studentperformance'}" (click)="performances='studentperformance'">Add Performance</a>
             </li>
             <li>
-              <a routerLink="./performance/class" [ngClass]="{'active': performances === 'classperformance'}" (click)="performances='classperformance'">Class Performance</a>
-            </li>
-            <li>
-              <a routerLink="./performance/subject" [ngClass]="{'active': performances === 'subjectperformance'}" (click)="performances='subjectperformance'">Subject Performance</a>
-            </li>
-            <li>
-              <a routerLink="./performance/teacher" [ngClass]="{'active': performances === 'teacherperformance'}" (click)="performances='teacherperformance'">Teacher Performance</a>
+              <a routerLink="./performance/student" [ngClass]="{'active': performances === 'studentperformance'}" (click)="performances='studentperformance'">List Performance</a>
             </li>
           </ul>
         </li>
@@ -108,15 +102,15 @@
           <div (click)="expandSubMenu(taskManager)">
             <a [ngClass]="{'active': status === 'manager'}" (click)="status='manager'">
               <i class="fa fa-tasks"></i>
-              <span>Task Manager</span>
+              <span>Language & Category</span>
             </a>
           </div>
           <ul class="sub" #taskManager>
             <li>
-              <a [ngClass]="{'active': taskmanager === 'assigntask'}" (click)="taskmanager='assigntask'">Assign Task</a>
+              <a [ngClass]="{'active': taskmanager === 'assigntask'}" (click)="taskmanager='assigntask'">Language</a>
             </li>
             <li>
-              <a [ngClass]="{'active': taskmanager === 'taskdetail'}" (click)="taskmanager='taskdetail'">Task Detail</a>
+              <a [ngClass]="{'active': taskmanager === 'taskdetail'}" (click)="taskmanager='taskdetail'">Category</a>
             </li>
           </ul>
         </li>
