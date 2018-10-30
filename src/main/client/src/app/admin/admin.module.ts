@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 import { AdminComponent } from './admin/admin.component';
 import {AdminRoutingModule} from "./admin-routing.module";
 import { AddBlogComponent } from './blog/add-blog/add-blog.component';
@@ -22,7 +24,7 @@ import { ListModuleComponent } from './module/list-module/list-module.component'
 
 @NgModule({
   imports: [
-    CommonModule, AdminRoutingModule
+    CommonModule, AdminRoutingModule, FormsModule, ReactiveFormsModule
   ],
   declarations: [AdminComponent, AddBlogComponent, BlogComponent, CourseComponent, AddCourseComponent,
     ListBlogComponent, ListCourseComponent, ModuleComponent, StepComponent, ListStepComponent,

@@ -1,0 +1,127 @@
+<div id="admissions">
+  <div class="panel">
+    <div class="panel-heading">
+      <h4>Add Course</h4>
+    </div>
+    <div class="panel-body">
+      <div class="form-body">
+        <form [formGroup]="courseForm" (ngSubmit)="createStudent()">
+          <div class="row no-gutters">
+            <p>
+              <b>PERSONAL DETAILS:-</b>
+            </p>
+            <hr>
+            <div class="col-12">
+              <div class="row no-gutters form-row">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Title
+                      <span> *</span>
+                    </label>
+                    <input type="text" class="form-control" formControlName="title">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Course Fee
+                      <span> *</span>
+                    </label>
+                    <input formControlName="course_fee" type="number" class="form-control">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Course Duration
+                    </label>
+                    <input formControlName="duration" type="number" class="form-control">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Category
+                      <span> *</span>
+                    </label>
+                    <select formControlName="category_id" class="form-control">
+                      <option [ngValue]="null">Select Category</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Language
+                      <span> *</span>
+                    </label>
+                    <select formControlName="language_id" class="form-control">
+                      <option [ngValue]="null">Select Language</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form-group">
+                    <label>Status
+                      <span> *</span>
+                    </label>
+                    <select formControlName="is_active" class="form-control">
+                      <option [ngValue]="null">Select Status</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <p>
+              <b>About Course:-</b>
+            </p>
+            <hr>
+            <div class="col-12">
+              <div class="row no-gutters form-row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label>Description
+                    </label>
+                    <textarea formControlName="description" class="form-control" rows="10"></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label>Prerequiste
+                      <span> *</span>
+                    </label>
+                    <textarea formControlName="prerequisite" class="form-control" rows="4"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <p>
+              <b>Media Course:-</b>
+            </p>
+            <hr>
+            <div class="form-group col-12 col-md-10">
+              <div class="fileupload fileupload-new" data-provides="fileupload"><input type="hidden">
+                <div class="fileupload-new thumbnail" id="fileupload-new">
+                  <img src="http://www.placehold.it/600x200/EFEFEF/AAAAAA&amp;text=no+image" class="img-fluid image" alt="">
+                </div>
+                <div>
+                  <span class="btn btn-theme02 btn-file">
+                    <span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image</span>
+                    <input type="file" class="default" (change)="onChange($event)">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-12">
+              <label for="blogTitle">Trailer Link</label>
+              <input type="text" class="form-control" #videoUrl id="video">
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-info btn-lg">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

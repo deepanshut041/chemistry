@@ -10,6 +10,9 @@ export class AddBlogComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.getElementById("spinner").style.display = "none";
+    document.getElementById("spinnerC").style.display = "none";
+    document.getElementById("blog-form").style.display = "block";
   }
 
 }

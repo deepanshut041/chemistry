@@ -1,0 +1,138 @@
+<div layout:fragment="content">
+    <main role="main" class="fluid-container">
+        <header class="container">
+            <div class="header-container">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-12 col-md-12 col-lg-6" id="headerLeft">
+                        <h2>Welcome to the Attriclasses Library</h2>
+                        <p class="text-muted">
+                            This is a catalog of all the courses we offer. Browse by topic or difficulty.
+                            Sign up today and get access to our entire library.
+                        </p>
+                        <h4>Ready to start learning?</h4>
+                        <p>Attriclasses offers courses for students.
+                            Get access to 1000s of hours of content.</p>
+                        <div class="btn btn-large started-button"><a href="/classroom/">Get Started Now <i class="fa fa-arrow-right"></i></a></div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6" id="headerRight">
+                        <img class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container" id="searchBox">
+            <div class="search-container">
+                <div class="row no-gutters">
+                    <div class="col-6 col-md-7 col-lg-8 ">
+                        <div class="search-box">
+                            <div class="row no-gutters">
+                                <div>
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <div class="col">
+                                    <input placeholder="Search Courses and Topics" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-5 col-lg-4">
+                        <div class="row no-gutters">
+                            <div class="col-6">
+                                Category <i class="fa fa-arrow-down"></i>
+                            </div>
+                            <div class="col-6">
+                                Language <i class="fa fa-arrow-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="courseBox">
+            <div class="course-container">
+                <div>
+                    <h2>Courses</h2>
+                    <p class="text-muted">Browse courses across an array of topics and disciplines.</p>
+                </div>
+                <div class="row no-gutters" th:if="courses">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="course-box">
+                            <a>
+                                <div class="course-box-head">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <p class="text-left"><i class="fa fa-book"></i> <span>O O O</span></p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-right"><span>20</span> min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-box-body">
+                                    <h6 class="text-muted">Course</h6>
+                                    <h5>HaloAlkens</h5>
+                                    <p class="text-muted">sdjksjks jksdjksdk sjwewe jw knjwewen sd
+                                        djklndsknlsknldnklsdklnsd msdsdjk</p>
+                                </div>
+                                <div class="course-box-footer">
+                                    <div>
+                                        <span>
+                                            1000 $
+                                        </span>
+                                        <span>
+                                            Oragnic
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="course-box">
+                            <a>
+                                <div class="course-box-head">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <p class="text-left"><i class="fa fa-book"></i> <span>O O O</span></p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="text-right"><span>20</span> min</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-box-body">
+                                    <h6 class="text-muted">Course</h6>
+                                    <h5>Bondig</h5>
+                                    <p class="text-muted">sdksdj Phenomina l uue isklie ejdjk</p>
+                                </div>
+                                <div class="course-box-footer">
+                                    <div>
+                                        <span>
+                                            100 $
+                                        </span>
+                                        <span>
+                                            Inorganic
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container" id="signupBox">
+            <div class="signup-container">
+                <div>
+                    <h2 class="text-center">Work Hard, Change Your Life</h2>
+                    <p class="text-center text-muted">With 100s courses and more to come, Attriclasses is the best way
+                        to learn.</p>
+                    <div class="text-center">
+                        <div class="btn btn-large started-button"><a href="/classroom/">Get Started Now <i class="fa fa-arrow-right"></i></a></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</div>

@@ -13,11 +13,12 @@ import {BlogDetailComponent} from "./blog/detail/blog-detail.component";
 import {CoursesComponent} from "./courses/courses.component";
 import {ContactComponent} from "./contact/contact.component";
 import {NotesComponent} from "./notes/notes.component";
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
     MainComponent, HomeComponent, NavbarComponent, FooterComponent, BlogComponent, BlogListComponent,
-    BlogDetailComponent, CoursesComponent, ContactComponent, NotesComponent
+    BlogDetailComponent, CoursesComponent, ContactComponent, NotesComponent, CourseComponent
   ],
   imports: [
     CommonModule, RouterModule, MDBBootstrapModule
